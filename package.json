@@ -5,7 +5,9 @@
   "author": "GPR <gpr@gagahpangeran.com>",
   "license": "MIT",
   "scripts": {
-    "start": "web-ext run"
+    "start": "web-ext run",
+    "format": "prettier --write \"**/*.{js,json,css,html}\"",
+    "lint": "prettier --check \"**/*.{js,json,css,html}\""
   },
   "dependencies": {
     "prettier": "^2.8.8",
