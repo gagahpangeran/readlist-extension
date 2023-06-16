@@ -1,4 +1,4 @@
-browser.tabs.query({ currentWindow: true, active: true }, (tabs) => {
+browser.tabs.query({ currentWindow: true, active: true }, tabs => {
   const tab = tabs[0];
 
   const linkInput = document.querySelector("#link-input");
@@ -9,5 +9,4 @@ browser.tabs.query({ currentWindow: true, active: true }, (tabs) => {
 
   linkInput.title = tab.url;
   titleInput.title = tab.title;
-})
-
+});
