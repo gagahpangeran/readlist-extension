@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Readlist",
+  "version": "1.0",
+  "description": "Save current page to Readlist",
+  "homepage_url": "https://github.com/gagahpangeran/readlist-extension/tree/master",
+  "icons": {
+    "48": "icons/readlist.svg",
+    "96": "icons/readlist.svg"
+  },
+
+  "permissions": ["activeTab"],
+
+  "page_action": {
+    "default_icon": {
+      "19": "icons/readlist.svg",
+      "38": "icons/readlist.svg"
+    },
+    "default_title": "Readlist",
+    "default_popup": "popup/readlist_form.html",
+    "show_matches": ["<all_urls>"]
+  }
+}
