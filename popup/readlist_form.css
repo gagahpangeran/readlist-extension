@@ -17,24 +17,24 @@ body {
   margin-bottom: 12px;
 }
 
-#popup-content label,
-#popup-content input,
-#popup-content button {
+#popup-form label,
+#popup-form input,
+#popup-form button {
   display: block;
 }
 
-#popup-content label {
+#popup-form label {
   margin: 8px 0 4px;
   font-size: 16px;
 }
 
-#popup-content input {
+#popup-form input {
   padding: 0 8px;
   font-size: 16px;
   width: 320px;
 }
 
-#popup-content button {
+#popup-form button {
   margin-top: 16px;
   padding: 0 8px;
 }
