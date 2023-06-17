@@ -9,7 +9,7 @@
     "96": "icons/readlist.svg"
   },
 
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
 
   "page_action": {
     "default_icon": {
