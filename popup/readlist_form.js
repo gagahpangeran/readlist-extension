@@ -5,7 +5,7 @@ const titleInput = document.querySelector("#title-input");
 const value = {
   server: "",
   token: ""
-}
+};
 
 async function getStorageValue() {
   try {

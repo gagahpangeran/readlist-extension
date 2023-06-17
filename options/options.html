@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Readlist Options</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Readlist Options</title>
-  <link rel="stylesheet" href="options.css">
-</head>
+  <body>
+    <div id="options-content">
+      <h2>Readlist Configuration</h2>
 
-<body>
-  <div id="options-content">
-    <h2>Readlist Configuration</h2>
+      <form id="options-form">
+        <label for="server">GraphQL server</label>
+        <input type="text" name="server" id="server-input" required />
 
-    <form id="options-form">
-      <label for="server">GraphQL server</label>
-      <input type="text" name="server" id="server-input" required />
+        <label for="token">Secret Token</label>
+        <input type="text" name="token" id="token-input" required />
 
-      <label for="token">Secret Token</label>
-      <input type="text" name="token" id="token-input" required />
+        <button type="submit" name="save">Save</button>
+      </form>
+    </div>
 
-      <button type="submit" name="save">Save</button>
-    </form>
-  </div>
-
-  <script src="options.js"></script>
-</body>
-
+    <script src="options.js"></script>
+  </body>
 </html>
