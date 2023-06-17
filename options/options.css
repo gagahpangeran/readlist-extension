@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #242629;
+  color: #ffffff;
+}
+
+#options-content {
+  padding: 16px;
+}
+
+#options-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#options-form label,
+#options-form input,
+#options-form button {
+  display: block;
+}
+
+#options-form label {
+  margin: 12px 0 8px;
+  font-size: 20px;
+}
+
+#options-form input {
+  padding: 0 8px;
+  font-size: 20px;
+  width: 320px;
+}
+
+#options-form button {
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 0 8px;
+}
