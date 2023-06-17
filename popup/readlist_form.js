@@ -2,14 +2,27 @@ const popupForm = document.querySelector("#popup-form");
 const linkInput = document.querySelector("#link-input");
 const titleInput = document.querySelector("#title-input");
 
+const value = {
+  server: "",
+  token: ""
+}
+
+async function getStorageValue() {
+  try {
+    const result = await browser.storage.local.get(value);
+    return result;
+  } catch (error) {
+    console.log("Error retrieving server and token value", error);
+  }
+}
+
 async function submitData(link, title) {
-  const GRAPHQL = "<redacted>";
-  const TOKEN = "<redacted>";
+  const { server, token } = await getStorageValue();
 
   try {
     const headers = {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${TOKEN}`
+      Authorization: `Bearer ${token}`
     };
 
     const query = `
@@ -31,7 +44,7 @@ async function submitData(link, title) {
       }
     };
 
-    await fetch(GRAPHQL, {
+    await fetch(server, {
       method: "POST",
       headers,
       body: JSON.stringify({
