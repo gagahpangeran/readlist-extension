@@ -19,5 +19,9 @@
     "default_title": "Readlist",
     "default_popup": "popup/readlist_form.html",
     "show_matches": ["<all_urls>"]
+  },
+
+  "options_ui": {
+    "page": "options/options.html"
   }
 }
