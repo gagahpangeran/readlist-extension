@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "web-ext run",
+    "build": "web-ext build",
     "format": "prettier --write \"**/*.{js,json,css,html}\"",
     "lint": "yarn lint:prettier && yarn lint:web-ext",
     "lint:prettier": "prettier --check \"**/*.{js,json,css,html}\"",
