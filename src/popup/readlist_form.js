@@ -62,12 +62,16 @@ function handleSubmit(e) {
   submitData(linkInput.value, titleInput.value);
 }
 
-browser.tabs.query({ currentWindow: true, active: true }, ([tab]) => {
-  linkInput.value = tab.url;
-  titleInput.value = tab.title;
+function fillInput(link, title) {
+  linkInput.value = link;
+  titleInput.value = title;
 
-  linkInput.title = tab.url;
-  titleInput.title = tab.title;
+  linkInput.title = link;
+  titleInput.title = title;
+}
+
+browser.tabs.query({ currentWindow: true, active: true }, async ([tab]) => {
+  fillInput(tab.url, tab.title);
 });
 
 popupForm.addEventListener("submit", handleSubmit);
