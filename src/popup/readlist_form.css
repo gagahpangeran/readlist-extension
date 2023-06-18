@@ -8,11 +8,24 @@ body {
   color: #ffffff;
 }
 
-#popup-content {
+#popup-setup {
+  padding: 16px;
+  max-width: 240px;
+}
+
+#popup-setup h4 {
+  font-size: 16px;
+}
+
+#popup-link-option {
+  font-size: 12px;
+}
+
+#popup-main {
   padding: 16px;
 }
 
-#popup-content h3 {
+#popup-main h3 {
   font-size: 20px;
   margin-bottom: 12px;
 }
@@ -37,4 +50,8 @@ body {
 #popup-form button {
   margin-top: 16px;
   padding: 0 8px;
+}
+
+.hidden {
+  display: none;
 }
