@@ -1,4 +1,5 @@
 const popupSetup = document.querySelector("#popup-setup");
+const popupLinkOption = document.querySelector("#popup-link-option");
 const popupMain = document.querySelector("#popup-main");
 const popupForm = document.querySelector("#popup-form");
 const linkInput = document.querySelector("#link-input");
@@ -64,6 +65,11 @@ function handleSubmit(e) {
   submitData(linkInput.value, titleInput.value);
 }
 
+function handleLink(e) {
+  e.preventDefault();
+  browser.runtime.openOptionsPage();
+}
+
 function fillInput(link, title) {
   linkInput.value = link;
   titleInput.value = title;
@@ -86,3 +92,4 @@ browser.tabs.query({ currentWindow: true, active: true }, async ([tab]) => {
 });
 
 popupForm.addEventListener("submit", handleSubmit);
+popupLinkOption.addEventListener("click", handleLink);
