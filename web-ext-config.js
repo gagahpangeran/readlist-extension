@@ -1,4 +1,5 @@
 module.exports = {
+  sourceDir: "src",
   artifactsDir: "build",
   ignoreFiles: [
     "node_modules",
