@@ -1,6 +1,9 @@
 module.exports = {
   sourceDir: "src",
   artifactsDir: "build",
+  build: {
+    overwriteDest: true
+  },
   ignoreFiles: [
     "node_modules",
     "build",
