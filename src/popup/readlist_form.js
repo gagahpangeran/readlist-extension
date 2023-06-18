@@ -4,6 +4,9 @@ const popupMain = document.querySelector("#popup-main");
 const popupForm = document.querySelector("#popup-form");
 const linkInput = document.querySelector("#link-input");
 const titleInput = document.querySelector("#title-input");
+const stateLoading = document.querySelector("#state-loading");
+const stateSuccess = document.querySelector("#state-success");
+const stateError = document.querySelector("#state-error");
 
 const value = {
   server: "",
@@ -19,7 +22,24 @@ async function getStorageValue() {
   }
 }
 
+function showState(state) {
+  if (state === "loading") {
+    stateLoading.className = "";
+    stateSuccess.className = "hidden";
+    stateError.className = "hidden";
+  } else if (state === "success") {
+    stateLoading.className = "hidden";
+    stateSuccess.className = "";
+    stateError.className = "hidden";
+  } else if (state === "error") {
+    stateLoading.className = "hidden";
+    stateSuccess.className = "hidden";
+    stateError.className = "";
+  }
+}
+
 async function submitData(link, title) {
+  showState("loading");
   const { server, token } = await getStorageValue();
 
   try {
@@ -55,8 +75,11 @@ async function submitData(link, title) {
         variables
       })
     });
+
+    showState("success");
   } catch (error) {
     console.log("Submit error", error);
+    showState("error");
   }
 }
 

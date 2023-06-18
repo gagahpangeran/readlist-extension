@@ -52,6 +52,12 @@ body {
   padding: 0 8px;
 }
 
+#state-loading,
+#state-success,
+#state-error {
+  margin-top: 16px;
+}
+
 .hidden {
   display: none;
 }
