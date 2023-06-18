@@ -1,3 +1,5 @@
+const popupSetup = document.querySelector("#popup-setup");
+const popupMain = document.querySelector("#popup-main");
 const popupForm = document.querySelector("#popup-form");
 const linkInput = document.querySelector("#link-input");
 const titleInput = document.querySelector("#title-input");
@@ -71,7 +73,16 @@ function fillInput(link, title) {
 }
 
 browser.tabs.query({ currentWindow: true, active: true }, async ([tab]) => {
-  fillInput(tab.url, tab.title);
+  const { server, token } = await getStorageValue();
+
+  if (server === "" || token === "") {
+    popupSetup.className = "";
+    popupMain.className = "hidden";
+  } else {
+    popupMain.className = "";
+    popupSetup.className = "hidden";
+    fillInput(tab.url, tab.title);
+  }
 });
 
 popupForm.addEventListener("submit", handleSubmit);
